@@ -4,28 +4,28 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 
 
-// function WelcomeScreen({ onStart, lang, setLang }) {
-//   useEffect(() => {
-//     const playAudioOnce = () => {
-//       const audio = new Audio('/Sia.mp3.mp3');
-//       audio.volume = 0.5;
-//       audio.play().catch(() => {});
-//       document.removeEventListener('touchstart', playAudioOnce);
-//     };
-//     document.addEventListener('touchstart', playAudioOnce);
-//   }, []);
-//   const handleStart = () => {
-//     const audio = new Audio('/Sia_-_Unstoppable_CeeNaija.com_.mp3');
-//     audio.volume = 1.0;
-//     audio.play()
-//       .then(() => {
-//         console.log('🎵 Audio started successfully');
-//       })
-//       .catch((error) => {
-//         console.warn('⚠️ Audio play failed:', error);
-//       });
-//     onStart();
-//   };
+function WelcomeScreen({ onStart, lang, setLang }) {
+  useEffect(() => {
+    const playAudioOnce = () => {
+      const audio = new Audio('/Sia.mp3.mp3');
+      audio.volume = 0.5;
+      audio.play().catch(() => {});
+      document.removeEventListener('touchstart', playAudioOnce);
+    };
+    document.addEventListener('touchstart', playAudioOnce);
+  }, []);
+  const handleStart = () => {
+    const audio = new Audio('/Sia_-_Unstoppable_CeeNaija.com_.mp3');
+    audio.volume = 1.0;
+    audio.play()
+      .then(() => {
+        console.log('🎵 Audio started successfully');
+      })
+      .catch((error) => {
+        console.warn('⚠️ Audio play failed:', error);
+      });
+    onStart();
+  };
   
   const headings = {
     TH: 'ระบบตรวจสอบระดับการสุกของทุเรียน ด้วย AI ที่เรียบง่าย งดงาม และแม่นยำ',
